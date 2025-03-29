@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+For custom workflow configuration ,please use the below samples.
+ [
+        {
+            "workFlowId": "1",
+            "content": "This is a test alert message"
+        },
+        {
+            "workFlowId": "2",
+            "content": "This is a test alert message"
+        },
+        {
+            "workFlowId": "3",
+            "imageUrl": "https://placekitten.com/200/300"
+        },
+        {
+            "workFlowId": "4",
+            "refreshPage": true
+        },
+        {
+            "workFlowId": "5",
+            "localStorageKey": "name",
+            "localStorageValue": "John Doe"
+        },
+        {
+            "workFlowId": "6",
+            "increaseButtonSize": true
+        },
+        {
+            "workFlowId": "9",
+            "prompt": true,
+            "promptMessage": "This is a test prompt message"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+        }
+]
+ #Workflow Configurations
 
-Currently, two official plugins are available:
+## Workflow 1: Alert Message
+- ID: 1
+- Action: Display Alert
+- Content: "This is a test alert message"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Workflow 2: Alert Message
+- ID: 2
+- Action: Display Alert
+- Content: "This is a test alert message"
 
-## Expanding the ESLint configuration
+## Workflow 3: Image Display
+- ID: 3
+- Action: Display Image
+- Image URL: https://placekitten.com/200/300
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Workflow 4: Page Refresh
+- ID: 4
+- Action: Refresh Page
+- Refresh Enabled: true
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Workflow 5: Local Storage
+- ID: 5
+- Action: Set Local Storage
+- Key: "name"
+- Value: "John Doe"
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Workflow 6: Button Resize
+- ID: 6
+- Action: Increase Button Size
+- Increase Size: true
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Workflow 7: Prompt Dialog
+- ID: 9
+- Action: Show Prompt
+- Prompt Message: "This is a test prompt message"
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
